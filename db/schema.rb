@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 20150318234919) do
   end
 
   create_table "photos_users", force: :cascade do |t|
-    t.integer "photos_id"
-    t.integer "users_id"
+    t.integer "photo_id"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|

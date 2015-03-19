@@ -3,7 +3,7 @@ require 'rails_helper'
 describe User do
 
   it { should validate_confirmation_of(:password) }
-  it { should }
+  it { should have_and_belong_to_many(:photos)}
 
   describe '#encrypt_password' do
     it('Creates a salt for passwords when creating a new user') do
