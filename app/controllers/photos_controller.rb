@@ -10,10 +10,15 @@ class PhotosController < ApplicationController
       render :new
     end
   end
-
   def new
     @photo = Photo.new
     render :new
+  end
+
+  def show
+    @photo = Photo.find(params[:id])
+    @all_tagged = @photo.users
+    @all_users = User.all
   end
 
   private

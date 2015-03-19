@@ -1,0 +1,8 @@
+<h1>This photo of:</h1>
+<% @all_tagged.each do |tagged_user| %>
+  <h2><%= tagged_user.name %></h2>
+<% end %>
+
+<%= image_tag @photo.file.url %>
+
+<%= render 'tag_form' %>
