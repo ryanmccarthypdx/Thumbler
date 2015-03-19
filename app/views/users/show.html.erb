@@ -1,6 +1,12 @@
 <h1>Welcome, <%= @user.name %></h1>
-<h4>Here are your photos:</h4>
 
-<% @user_photos.each do |photo| %>
-  <%= image_tag photo.file.url %>
+<%= render 'photos/form' %>
+
+<% if @user_photos.any? %>
+  <h4>Here are your photos:</h4>
+  <% @user_photos.each do |photo| %>
+    <%= image_tag photo.file.url %>
+  <% end %>
+<% else %>
+  <h4>No photos currently in your Thumblr, thilly.</h4>
 <% end %>
