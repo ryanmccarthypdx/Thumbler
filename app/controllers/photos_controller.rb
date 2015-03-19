@@ -4,7 +4,7 @@ class PhotosController < ApplicationController
     @photo.users << current_user
     if @photo.save
       flash[:notice] = "Thuccess!"
-      redirect users_path(current_user)
+      redirect_to user_path(current_user)
     else
       flash[:alert] = "Thumbs down for thumb reason"
       render :new
