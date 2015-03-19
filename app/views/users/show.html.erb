@@ -1,0 +1,6 @@
+<h1>Welcome, <%= @user.name %></h1>
+<h4>Here are your photos:</h4>
+
+<% @user_photos.each do |photo| %>
+  <%= image_tag photo.file.url %>
+<% end %>

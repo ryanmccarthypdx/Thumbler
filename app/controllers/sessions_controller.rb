@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     if @user
       flash[:notice] = "Thumbs up!"
       session[:user_id] = @user.id
-      redirect_to "/"
+      redirect_to user_path(@user)
     else
       flash[:alert] = "Thumbs down! There was a problem logging you in"
       render :new
